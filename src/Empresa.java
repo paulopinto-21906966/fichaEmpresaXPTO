@@ -20,6 +20,7 @@ public class Empresa {
 
     public void contratar(Funcionario funcionario) {
         funcionarios.add(funcionario);
+
     }
 
     public boolean despedir(Funcionario funcionario) {
