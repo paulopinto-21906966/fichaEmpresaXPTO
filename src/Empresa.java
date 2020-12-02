@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Empresa {
 
@@ -6,7 +7,16 @@ public class Empresa {
     ArrayList<Cliente> clientes;
     ArrayList<Funcionario> funcionarios;
     ArrayList<Tarefa> tarefas;
+    HashMap<Integer, Cliente> hashTarefasClientes;
     int limiteTarefas;
+
+    Empresa(String nome){
+        this.nome = nome;
+        this.clientes = new ArrayList<>();
+        this.funcionarios = new ArrayList<>();
+        this.tarefas = new ArrayList<>();
+        this.limiteTarefas = 30; //default
+    }
 
     public void contratar(Funcionario funcionario) {
         funcionarios.add(funcionario);

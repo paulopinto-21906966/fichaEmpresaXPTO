@@ -4,9 +4,12 @@ public class Tarefa {
 
     int id;
     String desc;
+    int duracao;
+    int mes;
 
-    Tarefa(String desc) {
+    Tarefa(String desc, int duracao) {
         this.desc = desc;
+        this.duracao = duracao;
         this.id = idMax;
         idMax++;
     }
@@ -17,6 +20,10 @@ public class Tarefa {
 
     public String getId() {
         return this.desc;
+    }
+
+    int horasGastas() { //getDuracao
+        return duracao;
     }
 
     @Override

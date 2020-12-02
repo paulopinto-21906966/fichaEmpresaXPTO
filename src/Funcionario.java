@@ -1,11 +1,11 @@
-public class Funcionario {
+public abstract class Funcionario {
 
-    String nome;
+    private String nome;
     int salario;
     int horasTrabalhadas;
-    String tipoFunc = "Funcionario";
+    private String tipoFunc = "Funcionario";
 
-    public Funcionario(String nome, int salario) {
+    Funcionario(String nome, int salario) {
         this.nome = nome;
         this.salario = salario;
     }
@@ -21,6 +21,8 @@ public class Funcionario {
     public int getHorasTrabalhadas() {
         return this.horasTrabalhadas;
     }
+
+    abstract public int calculaSalario();
 
     @Override
     public String toString() {
