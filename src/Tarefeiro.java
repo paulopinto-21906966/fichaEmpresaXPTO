@@ -12,7 +12,7 @@ public class Tarefeiro extends Funcionario {
 
     public int calculaSalarioTarefeiro() {
         int bonus = (this.numTarefasCompletas > 100 && this.horasTrabalhadas < 75) ? (int) (0.25 * (numTarefasCompletas - 50)) : 0;
-        return this.salario =  505 + 2 * this.horasTrabalhadas + bonus; // salario devia ter sido double :(
+        return this.salario = 505 + 2 * this.horasTrabalhadas + bonus; // salario devia ter sido double :(
     }
 
     public void executaTarefa() {
@@ -22,12 +22,18 @@ public class Tarefeiro extends Funcionario {
         this.tarefas.remove(tarefa);
     }
 
-    public int getNumTarefasCompletas(){
+    public int getNumTarefasCompletas() {
         return this.numTarefasCompletas;
     }
 
-    public Tarefa[] getTarefasCompletas(){
+    public Tarefa[] getTarefasCompletas() {
         return (Tarefa[]) this.tarefasCompletas.toArray();
+    }
+
+    public void displayTarefas(){
+        for(Tarefa tarefa : tarefas){
+            System.out.println(tarefa);
+        }
     }
 
 }

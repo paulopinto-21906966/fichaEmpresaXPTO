@@ -25,12 +25,9 @@ public class Empresa {
         return true;
     }
 
-
-
     public boolean removeTarefa(Tarefa tarefa) {
         return tarefas.remove(tarefa);
     }
-
 
     public boolean mudarLimiteTarefas(int limite) {
 
@@ -49,6 +46,5 @@ public class Empresa {
     public String getNome() {
         return this.nome;
     }
-
 
 }
